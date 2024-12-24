@@ -19,13 +19,13 @@ public class StaffDAO {
 	 * Sử dụng JDBC để thực hiện các câu lệnh truy vấn, close database sau khi hoàn tất.
 	 *
 	 */
-	public static void loadData() {
+	public static void loadDataStaff() {
 		map = new HashMap<>();
 		list = new ArrayList<>();
 		
 		String sql = "SELECT * FROM STAFF";
 		
-		try (Connection conn = DBConnection.getConnection(); 
+		try (Connection conn = DBConnection.getConnection();
 			 PreparedStatement stmt = conn.prepareStatement(sql)) {
 			
 			ResultSet rs = stmt.executeQuery();

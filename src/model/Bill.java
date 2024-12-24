@@ -13,9 +13,7 @@ public class Bill {
 		this.wasPay = wasPay;
 		this.time = time;
 	}
-	
-	
-	
+
 	public String getBillID() {
 		return billID;
 	}
