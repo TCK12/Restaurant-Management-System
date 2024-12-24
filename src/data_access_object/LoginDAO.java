@@ -12,7 +12,7 @@ public class LoginDAO {
     public boolean authenticateUser(String username, String password) {
         String sql = "SELECT * FROM staff_account WHERE username = ? AND password = ?";
 
-        try (Connection connection = DBConnection.getConnection();
+        try (Connection connection = JDBCUtil.getConnection();
         	 PreparedStatement statement = connection.prepareStatement(sql)) {
         	
             statement.setString(1, username);
